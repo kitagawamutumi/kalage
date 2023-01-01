@@ -13,7 +13,7 @@
     </head>
     <body class="antialiased">
         <h1>Blog Name</h1>
-        <from action="/posts" method="POST">
+        <form action="/posts" method="POST">
             @csrf
             <div class="title">
                 <h2>Title</h2>
@@ -21,11 +21,11 @@
             </div>
             <div class="body">
                 <h2>Body</h2>
-                <textarea name="post[body]"placeholder="今日も一日おつかれさまでした。"></textarea>
+                <textarea name="post[body]" placeholder="今日も一日おつかれさまでした。"></textarea>
             </div>
             <input type="submit" value="store">
-        </from>
-        <div class="footer">
+        </form>
+        <div class='footer'>
             <a href="/">戻る</a>
         </div>
     </body>
