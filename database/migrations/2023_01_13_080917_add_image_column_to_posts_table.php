@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('tatle', 50);
-            $table->string('body', 200);
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('image', 100)->nullable();
+
         });
     }
 
@@ -29,11 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
-    }
-    
-    public function categoty()
-    {
-        return $this->belongsTo(Categoroy::class);
+        Schema::table('posts', function (Blueprint $table) {
+            //
+        });
     }
 };
